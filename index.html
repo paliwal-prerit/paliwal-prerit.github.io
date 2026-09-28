@@ -1,11 +1,167 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>My Website</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Prerit Paliwal — systems engineer working at the boundary of low-latency compute, AI, and robotics.">
+  <meta name="theme-color" content="#0c0c0b">
+  <title>Prerit Paliwal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;1,400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230c0c0b'/%3E%3Ctext x='6' y='23' font-family='serif' font-size='16' fill='%23e8ff47'%3EPP%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <h1>Hello World!</h1>
-    <p>Welcome to my website.</p>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="nav">
+    <a class="mark" href="#top">PP.</a>
+    <nav aria-label="Primary">
+      <a href="#work">Work</a>
+      <a href="#projects">Projects</a>
+      <a href="#now">About</a>
+    </nav>
+    <button class="theme" type="button" aria-label="Toggle colour theme">
+      <span class="theme-icon" aria-hidden="true"></span>
+    </button>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top">
+      <p class="kicker">Systems Engineer · Builder · Research-minded</p>
+      <h1>
+        I build systems that<br>
+        <em>make intelligence real.</em>
+      </h1>
+      <p class="lede">
+        Low-latency C++ · AI · Robotics · Linux
+      </p>
+      <div class="actions">
+        <a class="btn primary" href="#work">Explore my work</a>
+        <a class="btn" href="https://github.com/preritpaliwal" rel="noopener noreferrer" target="_blank">GitHub</a>
+        <a class="btn" href="https://www.linkedin.com/in/prerit-paliwal-906443215" rel="noopener noreferrer" target="_blank">LinkedIn</a>
+      </div>
+      <figure class="visual" aria-hidden="true">
+        <canvas id="field" width="280" height="180"></canvas>
+        <figcaption>
+          <span>◉</span>
+          technical<br>visual
+        </figcaption>
+      </figure>
+    </section>
+
+    <ul class="strip" aria-label="Focus areas">
+      <li>C++</li>
+      <li>AI</li>
+      <li>Robotics</li>
+      <li>Linux</li>
+    </ul>
+
+    <section class="block" id="work">
+      <p class="idx">01 / Experience</p>
+      <h2>Close to the machine.</h2>
+      <ol class="timeline">
+        <li>
+          <time>Current</time>
+          <div>
+            <h3>Systems Engineer — Graviton Research Capital</h3>
+            <p>Low-latency C++ on Linux. Trading systems where cache lines, concurrency, and the network path are the problem — software that has to respect hardware.</p>
+          </div>
+        </li>
+        <li>
+          <time>2021–24</time>
+          <div>
+            <h3>KRSSG · KgpKubs</h3>
+            <p>Skills and strategy for autonomous humanoid soccer agents. Custom Gym training for Nao walk and kick; layered learning that moved low-level motion closer to the game.</p>
+          </div>
+        </li>
+        <li>
+          <time>2020–24</time>
+          <div>
+            <h3>IIT Kharagpur — B.Tech, Computer Science</h3>
+            <p>Where the systems, robotics, and ML threads started sharing a desk.</p>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <section class="stack" aria-label="Technical stack">
+      <div>
+        <h3>Systems</h3>
+        <p>C++ · Linux · Networking · Concurrency · Performance</p>
+      </div>
+      <div>
+        <h3>AI</h3>
+        <p>Machine Learning · Computer Vision · Algorithms</p>
+      </div>
+      <div>
+        <h3>Robotics</h3>
+        <p>Simulation · Multi-Agent Systems · Autonomous Systems</p>
+      </div>
+      <div>
+        <h3>Hardware</h3>
+        <p>FPGA · Embedded Systems · Sensors</p>
+      </div>
+    </section>
+
+    <section class="block" id="projects">
+      <p class="idx">02 / Selected work</p>
+      <h2>Things I’ve built.</h2>
+      <div class="grid">
+        <article>
+          <p class="tag">01</p>
+          <h3>RoboSoccer</h3>
+          <p>Decentralised humanoid agents: skills, roles, and a proxy Gym so reinforcement learning could reach the Nao’s walk and kick. Walking ~27% faster; kicking ~25% farther.</p>
+        </article>
+        <article>
+          <p class="tag">02</p>
+          <h3>Drone swarm</h3>
+          <p>Gold, Pluto Drone Swarm Challenge, InterIIT 11.0 — coordinating small UAVs as one system rather than a pile of single-robot demos.</p>
+          <a href="https://github.com/preritpaliwal/Drona-InterIIT23" rel="noopener noreferrer" target="_blank">Repository ↗</a>
+        </article>
+        <article>
+          <p class="tag">03</p>
+          <h3>RoboCup</h3>
+          <p>KgpKubs at RoboCup 2022 (Bangkok). Soccer Simulation 3D, top 8 — only undergraduate team, only team from India. Multi-agent strategy under a physics engine, not a slide deck.</p>
+        </article>
+        <article>
+          <p class="tag">04</p>
+          <h3>Perception</h3>
+          <p>Bosch InterIIT gold on age and gender from vision. At Griffith: fetal heart-rate from abdominal ECG — W-Net and an attention CycleGAN on a blind-source-separation problem.</p>
+          <a href="https://github.com/preritpaliwal/CycleGan" rel="noopener noreferrer" target="_blank">CycleGAN notes ↗</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="block now" id="now">
+      <p class="idx">03 / Direction</p>
+      <blockquote>
+        <p>The interesting problems are where software stops being abstract.</p>
+      </blockquote>
+      <p class="now-body">
+        I spend my days on systems that have to be fast and correct. What I’m reading toward is the other edge: intelligence that has a body — robots, sensors, control, and the neuroscience-shaped ideas about compute that keep showing up there. Embodied AI is an interest, not a title. I want problems where the model has to live in the world.
+      </p>
+      <p class="chips">Embodied AI · Robotics · Neuro × Compute</p>
+    </section>
+
+    <section class="block contact" id="contact">
+      <p class="idx">04 / Contact</p>
+      <h2>Have an interesting problem?</h2>
+      <p>LinkedIn is the résumé. GitHub is the evidence. This page is the short version of who I am.</p>
+      <div class="actions">
+        <a class="btn primary" href="https://www.linkedin.com/in/prerit-paliwal-906443215" rel="noopener noreferrer" target="_blank">Say hello</a>
+        <a class="btn" href="https://github.com/preritpaliwal" rel="noopener noreferrer" target="_blank">GitHub</a>
+        <a class="btn" href="https://www.linkedin.com/in/prerit-paliwal-906443215" rel="noopener noreferrer" target="_blank">LinkedIn</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <span>Prerit Paliwal</span>
+    <span>IIT Kharagpur CSE ’24</span>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
